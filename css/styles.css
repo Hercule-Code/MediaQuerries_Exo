@@ -1,0 +1,368 @@
+:root {
+    --fond: #002633;
+    --rouge: #c81010;
+    --bleu: #005881;
+    --jaune: #e4a600;
+    --vert: #00b5a6;
+    --texte: #7697A2;
+    font-family: "Barlow", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    color: white;
+    margin: 0;
+    background-color: var(--fond);
+}
+
+img {
+    width: 100%;
+    /* Retire la petite marge sous les images */
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+}
+
+/* Header */
+nav {
+    display: flex;
+    text-align: center;
+}
+
+.menu-button {
+    background-color: #454545;
+    font-size: 3.5rem;
+    margin: 0;
+    width: 60px;
+    line-height: 60px;
+
+}
+
+.menu-logo {
+    flex: 1;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav ul {
+    display: none;
+}
+
+#carousel figure {
+    position: relative;
+    text-transform: uppercase;
+    display: none;
+}
+
+#carousel figure.active {
+    display: block;
+}
+
+#fleche-gauche,
+#fleche-droite {
+    position: absolute;
+    bottom: 0;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--fond);
+    padding: 10px;
+}
+
+#fleche-droite {
+    right: 0px;
+}
+
+#carousel img {
+    height: calc(100vh - 60px);
+    object-fit: cover;
+    position: relative;
+}
+
+#carousel figcaption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#carousel h1 {
+    background-color: var(--rouge);
+    font-size: 3rem;
+    padding: 10px;
+    margin: 0;
+}
+
+#carousel h2 {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Section boutons */
+#boutons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Les balises article n'ayant pas la classe image dans #boutons */
+#boutons article:not(.image) {
+    padding: 20px;
+}
+
+.icon {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.rouge {
+    background-color: var(--rouge);
+}
+
+.bleu {
+    background-color: var(--bleu);
+}
+
+.jaune {
+    background-color: var(--jaune);
+}
+
+.vert {
+    background-color: var(--vert);
+}
+
+.image {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* grid-column: 1 / 3; */
+}
+
+/* Responsive */
+#responsive {
+    padding: 8rem 0;
+    width: 50%;
+    /* margin:auto centre le bloc dans son parent à condition que sa largeur soit inférieure à 100% */
+    margin: auto;
+}
+
+#responsive h1,
+#references h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#responsive span,
+#references span {
+    font-weight: 200;
+}
+
+#responsive p,
+#titre p {
+    color: var(--texte);
+    line-height: 1.5rem;
+}
+
+/* Section3 */
+#section3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#section3 h1 {
+    font-size: 3rem;
+}
+
+#section3 .texte {
+    padding: 1rem;
+}
+
+#section3 ul {
+    padding-left: 1rem;
+}
+
+/* References */
+#references h1 {
+    text-align: center;
+}
+
+#references div,
+#reseaux {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Social */
+#social {
+    margin-bottom: 15px;
+}
+
+#titre {
+    text-align: right;
+    margin: 30px 10px;
+}
+
+#titre h1 {
+    text-transform: uppercase;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.youtube {
+    background-color: #bb0000;
+}
+
+.linkedin {
+    background-color: #007bb5;
+}
+
+#reseaux p {
+    margin: 0;
+    font-size: 5rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#reseaux a {
+    color: white;
+}
+
+/* coordonnées */
+#coordonnees {
+    display: flex;
+}
+
+#coordonnees section:first-of-type {
+    flex: 1;
+    padding-right: 15px;
+}
+
+#coordonnees section:last-of-type {
+    flex: 3;
+    padding-right: 15px;
+}
+
+#coordonnees section>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#coordonnees h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+#coordonnees p,
+address {
+    color: var(--texte);
+}
+
+#coordonnees span {
+    color: var(--rouge);
+}
+
+#coypright {
+    color: var(--texte);
+    text-align: center;
+}
+
+/* Ordinateur */
+/* 1000px */
+
+@media screen and (min-width:1000px) {
+
+    /* le CSS s'appliquera pour les ecrans de 1000px ou plus */
+    :root {
+        font-size: 16px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav li {
+        padding: 10px;
+        margin: 10px;
+        text-transform: uppercase;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--texte);
+    }
+
+    .menu-logo {
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    /* carousel */
+    #carousel h1,
+    #carousel h2 {
+        /* Reduit les balises a la largeur maximum du contenu */
+        width: max-content;
+        /* Permet d'eviter les débordements */
+        max-width: 100%;
+    }
+
+    /*  boutton*/
+
+    #boutons {
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: repeat(4, );
+    }
+
+    .image {
+        grid-column: 3 / 4;
+        grid-row: 1 / 4;
+    }
+
+    .rouge,
+    #boutton .bleu {
+        grid-row: 1 / 3;
+    }
+
+    .jaune,
+    .vert {
+        grid-row: 3 / 5;
+    }
+
+    /* social */
+    #social {
+        display: flex;
+        padding-top: 15px;
+    }
+
+    #titre {
+        flex: 1;
+    }
+
+    #reseaux {
+        flex: 2;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
